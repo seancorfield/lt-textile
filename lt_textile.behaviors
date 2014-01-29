@@ -1,0 +1,4 @@
+{:+ {:app [(:lt.objs.plugins/load-js ["textile/textile.js"
+                                      "textile_compiled.js"])
+           (:lt.objs.plugins/load-css "css/github.css")]
+     :lt-textile.hello [:lt.plugins.lt-textile/on-close-destroy]}}
