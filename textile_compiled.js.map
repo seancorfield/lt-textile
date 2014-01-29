@@ -1,6 +1,6 @@
 {"version":3,
  "file":
- "/Users/sean/Dropbox/PlainText/LightTable/plugins/Textilecompiled.map",
+ "compiled.map",
  "sources":
  ["src/lt/plugins/lt_textile.cljs"],
  "lineCount":91,
@@ -9,12 +9,12 @@
  "names":
  ["lt.plugins.lt-textile/setTextileHTML!", "ed", "obj", "js/console",
   "js/textile", "lt.objs.editor/->cm-ed", "lt.object/->content",
-  "e__8100__auto__", "crate.core/html", "seq__8278", "cljs.core/seq",
-  "cljs.core/partition", "chunk__8279", "count__8280", "i__8281",
-  "vec__8282", "cljs.core/-nth", "ev__8101__auto__", "cljs.core/nth",
-  "func__8102__auto__", "lt.util.dom/on", "temp__4092__auto__",
-  "cljs.core/chunked-seq?", "c__7486__auto__", "cljs.core/chunk-first",
-  "cljs.core/chunk-rest", "cljs.core/count", "vec__8283",
+  "e__8099__auto__", "crate.core/html", "seq__8189", "cljs.core/seq",
+  "cljs.core/partition", "chunk__8190", "count__8191", "i__8192",
+  "vec__8193", "cljs.core/-nth", "ev__8100__auto__", "cljs.core/nth",
+  "func__8101__auto__", "lt.util.dom/on", "temp__4092__auto__",
+  "cljs.core/chunked-seq?", "c__7485__auto__", "cljs.core/chunk-first",
+  "cljs.core/chunk-rest", "cljs.core/count", "vec__8194",
   "cljs.core/first", "cljs.core/next",
   "lt.plugins.lt-textile/textile-skeleton", "this",
   "lt.object/object*", "lt.plugins.lt-textile/__BEH__on-close-destroy",
