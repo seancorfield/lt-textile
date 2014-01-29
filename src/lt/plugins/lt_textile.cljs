@@ -9,7 +9,6 @@
   (:require-macros [lt.macros :refer [defui behavior]]))
 
 (defn setTextileHTML! [ed obj]
-  (.log js/console (js/textile (.getValue (editor/->cm-ed ed))))
   (set! (.-innerHTML (object/->content obj))
         (js/textile (.getValue (editor/->cm-ed ed)))))
 
