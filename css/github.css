@@ -8,6 +8,11 @@
   padding: 30px;
   color: black;
   overflow: scroll;
+  padding-bottom: 800px;
+}
+
+.lt-textile ul{
+  list-style: initial;
 }
 
 .lt-textile em{
@@ -217,6 +222,7 @@
   margin-bottom: 0;
 }
 .lt-textile table {
+  color: black;
   padding: 0;
 }
 .lt-textile table tr {
