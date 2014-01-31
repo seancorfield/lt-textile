@@ -12,6 +12,9 @@
   (set! (.-innerHTML (object/->content obj))
         (js/textile (.getValue (editor/->cm-ed ed)))))
 
+(defn get-filename [ed]
+  (-> @ed :info :name))
+
 (defui textile-skeleton [this]
   [:div {:class "lt-textile"}
    [:h1 "This should be replaced with textile content eventually"]])
@@ -20,7 +23,8 @@
                 :tags [:lt-textile.textile]
                 :name "textile"
                 :behaviors [::on-close-destroy]
-                :init (fn [this]
+                :init (fn [this filename]
+                        (object/update! this [:name] (constantly (str filename " - Live")))
                         (textile-skeleton this)))
 
 (behavior ::on-close-destroy
@@ -41,8 +45,9 @@
 (cmd/command {:command ::watch-editor
               :desc "Textile: Watch this editor for changes"
               :exec (fn []
-                      (let [textile-obj (object/create ::lt-textile.textile)
-                            ed (pool/last-active)]
+                      (let [ed (pool/last-active)
+                            filename (get-filename ed)
+                            textile-obj (object/create ::lt-textile.textile filename)]
                         (tabs/add-or-focus! textile-obj)
                         (object/update! ed [:textile] (fn [] textile-obj))
                         (object/add-behavior! ed ::read-editor)
